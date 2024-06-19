@@ -26,6 +26,7 @@ impl eframe::App for TemplateApp {
     }
 
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
+        ctx.request_repaint();
         egui::CentralPanel::default().show(ctx, |ui| {
             ui.add(ServerWidget::new("ws://127.0.0.0:5000"));
         });
