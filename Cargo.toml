@@ -11,13 +11,18 @@ all-features = true
 targets = ["x86_64-unknown-linux-gnu", "wasm32-unknown-unknown"]
 
 [dependencies]
-egui = "0.27.0"
-eframe = { version = "0.27.0", default-features = false, features = [
+#egui = "0.27.0"
+egui = { path = "../egui/crates/egui", features = ["serde"] }
+
+#eframe = { version = "0.27.0", default-features = false, features = [
+
+eframe = { path = "../egui/crates/eframe", features = [
     "accesskit",     # Make egui comptaible with screen readers. NOTE: adds a lot of dependencies.
     "default_fonts", # Embed the default egui fonts.
     "glow",          # Use the glow rendering backend. Alternative: "wgpu".
     "persistence",   # Enable restoring app state when restarting the app.
 ] }
+
 log = "0.4"
 metacontrols-client = { path = "../metacontrols/client" }
 
