@@ -929,6 +929,7 @@ checksum = "75b325c5dbd37f80359721ad39aca5a29fb04c89279657cffdda8736d0c0b9d2"
 [[package]]
 name = "ecolor"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "bytemuck",
  "serde",
@@ -937,6 +938,7 @@ dependencies = [
 [[package]]
 name = "eframe"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "bytemuck",
  "cocoa",
@@ -986,6 +988,7 @@ dependencies = [
 [[package]]
 name = "egui"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "accesskit",
  "ahash",
@@ -999,6 +1002,7 @@ dependencies = [
 [[package]]
 name = "egui-wgpu"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "bytemuck",
  "document-features",
@@ -1015,6 +1019,7 @@ dependencies = [
 [[package]]
 name = "egui-winit"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "accesskit_winit",
  "arboard",
@@ -1031,6 +1036,7 @@ dependencies = [
 [[package]]
 name = "egui_glow"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "bytemuck",
  "egui",
@@ -1045,6 +1051,7 @@ dependencies = [
 [[package]]
 name = "emath"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "bytemuck",
  "serde",
@@ -1098,6 +1105,7 @@ dependencies = [
 [[package]]
 name = "epaint"
 version = "0.27.2"
+source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
 dependencies = [
  "ab_glyph",
  "ahash",
@@ -1742,7 +1750,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c2a198fb6b0eada2a8df47933734e6d35d350665a33a3593d7164fa52c75c19"
 dependencies = [
  "cfg-if",
- "windows-targets 0.52.5",
+ "windows-targets 0.48.5",
 ]
 
 [[package]]
