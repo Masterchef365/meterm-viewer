@@ -36,7 +36,7 @@ env_logger = "0.10"
 # web:
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 wasm-bindgen-futures = "0.4"
-
+web-sys = { version = "0.3.68", features = ["Location", "Window"] }
 
 [profile.release]
 opt-level = 2 # fast and small wasm

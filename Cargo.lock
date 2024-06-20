@@ -980,6 +980,7 @@ dependencies = [
  "metacontrols-client",
  "serde",
  "wasm-bindgen-futures",
+ "web-sys",
 ]
 
 [[package]]
