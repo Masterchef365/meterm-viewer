@@ -1,4 +1,4 @@
-use metacontrols_client::ServerWidget;
+use meterm_client::ServerWidget;
 
 #[derive(serde::Deserialize, serde::Serialize)]
 #[serde(default)]
