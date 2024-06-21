@@ -1839,7 +1839,6 @@ dependencies = [
 [[package]]
 name = "metacontrols-client"
 version = "0.1.0"
-source = "git+https://github.com/Masterchef365/meterm.git?branch=main#17bf74cde9d800b875322c51cc844c368847708a"
 dependencies = [
  "ewebsock",
  "log",
@@ -1849,7 +1848,6 @@ dependencies = [
 [[package]]
 name = "metacontrols-common"
 version = "0.1.0"
-source = "git+https://github.com/Masterchef365/meterm.git?branch=main#17bf74cde9d800b875322c51cc844c368847708a"
 dependencies = [
  "bincode",
  "egui",
