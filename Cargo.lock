@@ -972,20 +972,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "eframe_template"
-version = "0.1.0"
-dependencies = [
- "eframe",
- "egui",
- "env_logger",
- "log",
- "metacontrols-client",
- "serde",
- "wasm-bindgen-futures",
- "web-sys",
-]
-
-[[package]]
 name = "egui"
 version = "0.27.2"
 source = "git+https://github.com/Masterchef365/egui.git?branch=no-usize-in-interface#5a08e80b65b6e887f5afa6a2aa06d48b2a0a6fce"
@@ -1883,6 +1869,20 @@ dependencies = [
  "log",
  "objc",
  "paste",
+]
+
+[[package]]
+name = "meterm_viewer"
+version = "0.1.0"
+dependencies = [
+ "eframe",
+ "egui",
+ "env_logger",
+ "log",
+ "metacontrols-client",
+ "serde",
+ "wasm-bindgen-futures",
+ "web-sys",
 ]
 
 [[package]]
