@@ -1736,7 +1736,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0c2a198fb6b0eada2a8df47933734e6d35d350665a33a3593d7164fa52c75c19"
 dependencies = [
  "cfg-if",
- "windows-targets 0.52.5",
+ "windows-targets 0.48.5",
 ]
 
 [[package]]
@@ -1854,7 +1854,7 @@ dependencies = [
 [[package]]
 name = "meterm-client"
 version = "0.1.0"
-source = "git+https://github.com/Masterchef365/meterm.git?branch=main#2dd7bb9153ce3b4c0c96b094f5bbd260b3b8a956"
+source = "git+https://github.com/Masterchef365/meterm.git?branch=main#616745585fc5f683e98369c1536334c3a32f4ef2"
 dependencies = [
  "ewebsock",
  "log",
@@ -1864,7 +1864,7 @@ dependencies = [
 [[package]]
 name = "meterm-common"
 version = "0.1.0"
-source = "git+https://github.com/Masterchef365/meterm.git?branch=main#2dd7bb9153ce3b4c0c96b094f5bbd260b3b8a956"
+source = "git+https://github.com/Masterchef365/meterm.git?branch=main#616745585fc5f683e98369c1536334c3a32f4ef2"
 dependencies = [
  "bincode",
  "egui",

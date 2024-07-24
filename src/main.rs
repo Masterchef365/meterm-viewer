@@ -1,6 +1,8 @@
 #![warn(clippy::all, rust_2018_idioms)]
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")] // hide console window on Windows in release
 
+const DEFAULT_SERVER: &str = "ws://127.0.0.1:5000";
+
 // When compiling natively:
 #[cfg(not(target_arch = "wasm32"))]
 fn main() -> eframe::Result<()> {
@@ -17,10 +19,14 @@ fn main() -> eframe::Result<()> {
             ),
         ..Default::default()
     };
+
+    let server = std::env::args().skip(1).next()
+        .unwrap_or_else(|| DEFAULT_SERVER.to_string());
+
     eframe::run_native(
         "eframe template",
         native_options,
-        Box::new(|cc| Box::new(meterm_viewer::TemplateApp::new(cc))),
+        Box::new(|cc| Box::new(meterm_viewer::TemplateApp::new(cc, server))),
     )
 }
 
@@ -32,12 +38,24 @@ fn main() {
 
     let web_options = eframe::WebOptions::default();
 
+    // Get the server from the URL
+    let server: String = web_sys::window()
+        .unwrap()
+        .location()
+        .href()
+        .unwrap()
+        .split("?srv=")
+        .skip(1)
+        .next()
+        .map(|s| s.to_string())
+        .unwrap_or_else(|| DEFAULT_SERVER.to_string());
+
     wasm_bindgen_futures::spawn_local(async {
         eframe::WebRunner::new()
             .start(
                 "the_canvas_id", // hardcode it
                 web_options,
-                Box::new(|cc| Box::new(meterm_viewer::TemplateApp::new(cc))),
+                Box::new(|cc| Box::new(meterm_viewer::TemplateApp::new(cc, server))),
             )
             .await
             .expect("failed to start eframe");
