@@ -26,7 +26,7 @@ fn main() -> eframe::Result<()> {
     eframe::run_native(
         "eframe template",
         native_options,
-        Box::new(|cc| Box::new(meterm_viewer::TemplateApp::new(cc, server))),
+        Box::new(|cc| Ok(Box::new(meterm_viewer::TemplateApp::new(cc, server)))),
     )
 }
 
