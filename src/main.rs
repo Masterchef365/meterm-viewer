@@ -55,7 +55,7 @@ fn main() {
             .start(
                 "the_canvas_id", // hardcode it
                 web_options,
-                Box::new(|cc| Box::new(meterm_viewer::TemplateApp::new(cc, server))),
+                Box::new(|cc| Ok(Box::new(meterm_viewer::TemplateApp::new(cc, server)))),
             )
             .await
             .expect("failed to start eframe");
