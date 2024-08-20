@@ -20,7 +20,9 @@ fn main() -> eframe::Result<()> {
         ..Default::default()
     };
 
-    let server = std::env::args().skip(1).next()
+    let server = std::env::args()
+        .skip(1)
+        .next()
         .unwrap_or_else(|| DEFAULT_SERVER.to_string());
 
     eframe::run_native(

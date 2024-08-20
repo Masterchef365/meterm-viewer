@@ -4,12 +4,14 @@ use meterm_client::ServerWidget;
 #[serde(default)]
 pub struct TemplateApp {
     server: String,
+    debug_mode: bool,
 }
 
 impl Default for TemplateApp {
     fn default() -> Self {
         Self {
             server: "ws://127.0.0.1:5000".to_string(),
+            debug_mode: false,
         }
     }
 }
@@ -22,7 +24,10 @@ impl TemplateApp {
         }
         */
 
-        Self { server }
+        Self {
+            server,
+            ..Default::default()
+        }
     }
 }
 
@@ -32,10 +37,13 @@ impl eframe::App for TemplateApp {
     }
 
     fn update(&mut self, ctx: &egui::Context, _frame: &mut eframe::Frame) {
-        
         egui::CentralPanel::default().show(ctx, |ui| {
-            ui.label(&self.server);
-            ui.add(ServerWidget::new(&self.server));
+            ui.horizontal(|ui| {
+                ui.label(&self.server);
+                ui.checkbox(&mut self.debug_mode, "Debug mode")
+                    .on_hover_text("Show the updates to the server only. Flashing lights warning!");
+            });
+            ui.add(ServerWidget::new(&self.server).debug_packets(self.debug_mode));
         });
     }
 }

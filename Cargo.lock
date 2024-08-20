@@ -1829,7 +1829,7 @@ dependencies = [
 [[package]]
 name = "meterm-client"
 version = "0.1.0"
-source = "git+https://github.com/Masterchef365/meterm.git?branch=main#ea13432a30ff4f6ba7b0c8d4aa82cd27675edee9"
+source = "git+https://github.com/Masterchef365/meterm.git?branch=main#6483a1a075726314dd08e26fa64f8e00f5648556"
 dependencies = [
  "ewebsock",
  "log",
@@ -1839,7 +1839,7 @@ dependencies = [
 [[package]]
 name = "meterm-common"
 version = "0.1.0"
-source = "git+https://github.com/Masterchef365/meterm.git?branch=main#ea13432a30ff4f6ba7b0c8d4aa82cd27675edee9"
+source = "git+https://github.com/Masterchef365/meterm.git?branch=main#6483a1a075726314dd08e26fa64f8e00f5648556"
 dependencies = [
  "bincode",
  "egui",
