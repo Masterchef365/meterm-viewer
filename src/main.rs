@@ -3,6 +3,8 @@
 
 const DEFAULT_SERVER: &str = "ws://127.0.0.1:5000";
 
+use eframe::wasm_bindgen::JsCast;
+
 // When compiling natively:
 #[cfg(not(target_arch = "wasm32"))]
 fn main() -> eframe::Result<()> {
@@ -53,9 +55,20 @@ fn main() {
         .unwrap_or_else(|| DEFAULT_SERVER.to_string());
 
     wasm_bindgen_futures::spawn_local(async {
+        let document = web_sys::window()
+            .expect("No window")
+            .document()
+            .expect("No document");
+
+        let canvas = document
+            .get_element_by_id("the_canvas_id")
+            .expect("Failed to find the_canvas_id")
+            .dyn_into::<web_sys::HtmlCanvasElement>()
+            .expect("the_canvas_id was not a HtmlCanvasElement");
+
         eframe::WebRunner::new()
             .start(
-                "the_canvas_id", // hardcode it
+                canvas,
                 web_options,
                 Box::new(|cc| Ok(Box::new(meterm_viewer::TemplateApp::new(cc, server)))),
             )
