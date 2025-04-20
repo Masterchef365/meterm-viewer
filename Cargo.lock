@@ -1851,6 +1851,7 @@ dependencies = [
 [[package]]
 name = "meterm-client"
 version = "0.1.0"
+source = "git+https://github.com/Masterchef365/meterm.git?branch=main#107fbb5f0c4185fe97b1704dc6f512cca15fd28a"
 dependencies = [
  "ewebsock",
  "log",
@@ -1860,6 +1861,7 @@ dependencies = [
 [[package]]
 name = "meterm-common"
 version = "0.1.0"
+source = "git+https://github.com/Masterchef365/meterm.git?branch=main#107fbb5f0c4185fe97b1704dc6f512cca15fd28a"
 dependencies = [
  "anyhow",
  "bincode",
